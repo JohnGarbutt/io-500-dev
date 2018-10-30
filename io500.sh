@@ -72,16 +72,16 @@ function setup_ior_easy {
 
 function setup_mdt_easy {
   io500_mdtest_easy_params="-u -L" # unique dir per thread, files only at leaves
-  io500_mdtest_easy_files_per_proc=25000
+  io500_mdtest_easy_files_per_proc=25
 }
 
 function setup_ior_hard {
-  io500_ior_hard_writes_per_proc=10000
+  io500_ior_hard_writes_per_proc=100
   io500_ior_hard_other_options="" #e.g., -E to keep precreated files using lfs setstripe, or -a MPIIO
 }
 
 function setup_mdt_hard {
-  io500_mdtest_hard_files_per_proc=5000
+  io500_mdtest_hard_files_per_proc=500
   io500_mdtest_hard_other_options=""
 }
 
@@ -96,9 +96,9 @@ function setup_find {
   #    If a custom approach is used, please provide enough info so others can reproduce.
 
   # the serial version that should run (SLOWLY) without modification
-  #io500_find_mpi="False"
-  #io500_find_cmd=$PWD/bin/sfind.sh
-  #io500_find_cmd_args=""
+  io500_find_mpi="False"
+  io500_find_cmd=$PWD/bin/sfind.sh
+  io500_find_cmd_args=""
 
   # a parallel version in C, the -s adds a stonewall
   #   for a real run, turn -s (stonewall) off or set it at 300 or more
