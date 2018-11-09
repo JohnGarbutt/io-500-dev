@@ -27,11 +27,8 @@ RUN set -x \
 
 WORKDIR /home/io500/io-500-dev
 
-#VOLUME /home/io500/io-500-dev/datafiles
-#VOLUME /home/io500/io-500-dev/results
-#USER root
-#RUN chown -R io500 /home/io500
-#USER io500
+VOLUME /home/io500/io-500-dev/datafiles
+VOLUME /home/io500/io-500-dev/results
 
-#ENTRYPOINT ["sh", "-c", "sleep infinity"]
-ENTRYPOINT ["/home/io500/io-500-dev/io500.sh"]
+USER root
+ENTRYPOINT ["/home/io500/io-500-dev/entrypoint.sh"]
