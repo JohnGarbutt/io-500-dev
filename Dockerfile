@@ -6,7 +6,7 @@ RUN apt-get update \
         nano autoconf wget unzip sudo \
     && rm -rf /var/lib/apt/lists/*
 
-ARG IO500_DOWNLOAD_URL=https://github.com/VI4IO/io-500-dev/archive/master.zip
+ARG IO500_DOWNLOAD_URL=https://github.com/johngarbutt/io-500-dev/archive/master.zip
 
 RUN useradd -ms /bin/bash io500
 USER io500
