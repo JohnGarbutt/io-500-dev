@@ -15,16 +15,16 @@ set -euo pipefail  # better error handling
 # These are listed in the order that they run.
 io500_run_ior_easy="True" # does the write phase and enables the subsequent read
 io500_run_md_easy="True"  # does the creat phase and enables the subsequent stat
-io500_run_ior_hard="True" # does the write phase and enables the subsequent read
-io500_run_md_hard="True"  # does the creat phase and enables the subsequent read
-io500_run_find="True"
+io500_run_ior_hard="False" # does the write phase and enables the subsequent read
+io500_run_md_hard="False"  # does the creat phase and enables the subsequent read
+io500_run_find="False"
 io500_run_ior_easy_read="True"
-io500_run_md_easy_stat="True"
-io500_run_ior_hard_read="True"
-io500_run_md_hard_stat="True"
-io500_run_md_hard_read="True"
-io500_run_md_easy_delete="True" # turn this off if you want to just run find by itself
-io500_run_md_hard_delete="True" # turn this off if you want to just run find by itself
+io500_run_md_easy_stat="False"
+io500_run_ior_hard_read="False"
+io500_run_md_hard_stat="False"
+io500_run_md_hard_read="False"
+io500_run_md_easy_delete="False" # turn this off if you want to just run find by itself
+io500_run_md_hard_delete="False" # turn this off if you want to just run find by itself
 io500_run_mdreal="False"  # this one is optional
 io500_cleanup_workdir="False"  # this flag is currently ignored. You'll need to clean up your data files manually if you want to.
 io500_stonewall_timer=300 # Stonewalling timer, stop with wearout after 300s with default test, set to 0, if you never want to abort...
